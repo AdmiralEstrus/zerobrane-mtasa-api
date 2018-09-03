@@ -4961,4 +4961,1179 @@ return {
 		args = "(element editField, bool status)",
 		returns = "bool",
 	},
+	guiCreateGridList = {
+		type = "function",
+		args = "(float x, float y, float width, float height, bool relative [, element parent = nil])",
+		returns = "element",
+	},
+	guiGridListAddColumn = {
+		type = "function",
+		args = "(element gridList, string title, float width)",
+		returns = "int",
+	},
+	guiGridListAddRow = {
+		type = "function",
+		args = "(element gridList [, int/string itemText1, int/string itemText2, ... ])",
+		returns = "int",
+	},
+	guiGridListAutoSizeColumn = {
+		type = "function",
+		args = "(element gridList, int columnIndex)",
+		returns = "bool",
+	},
+	guiGridListClear = {
+		type = "function",
+		args = "(element gridList)",
+		returns = "bool",
+	},
+	guiGridListGetColumnCount = {
+		type = "function",
+		args = "(element gridList)",
+		returns = "int",
+	},
+	guiGridListGetColumnTitle = {
+		type = "function",
+		args = "(element guiGridlist, int columnIndex)",
+		returns = "string",
+	},
+	guiGridListGetColumnWidth = {
+		type = "function",
+		args = "(element gridList, int columnIndex, bool relative)",
+		returns = "bool",
+	},
+	guiGridListGetHorizontalScrollPosition = {
+		type = "function",
+		args = "(element guiGridlist)",
+		returns = "float",
+	},
+	guiGridListGetItemColor = {
+		type = "function",
+		args = "(element gridList, int rowIndex, int columnIndex)",
+		returns = "4 ints",
+	},
+	guiGridListGetItemData = {
+		type = "function",
+		args = "(element gridList, int rowIndex, int columnIndex)",
+		returns = "var",
+	},
+	guiGridListGetItemText = {
+		type = "function",
+		args = "(element gridList, int rowIndex, int columnIndex)",
+		returns = "string",
+	},
+	guiGridListGetRowCount = {
+		type = "function",
+		args = "(element gridList)",
+		returns = "int",
+	},
+	guiGridListGetSelectedCount = {
+		type = "function",
+		args = "(element gridList)",
+		returns = "int",
+	},
+	guiGridListGetSelectedItem = {
+		type = "function",
+		args = "(element gridList)",
+		returns = "2 ints",
+	},
+	guiGridListGetSelectedItems = {
+		type = "function",
+		args = "(element gridList)",
+		returns = "table",
+	},
+	guiGridListGetVerticalScrollPosition = {
+		type = "function",
+		args = "(element guiGridlist)",
+		returns = "float",
+	},
+	guiGridListInsertRowAfter = {
+		type = "function",
+		args = "(element gridList [, int rowIndex, int/string itemText1, int/string itemText2, ... ])",
+		returns = "int",
+	},
+	guiGridListRemoveColumn = {
+		type = "function",
+		args = "(element gridList, int columnIndex)",
+		returns = "bool",
+	},
+	guiGridListRemoveRow = {
+		type = "function",
+		args = "(element gridList, int rowIndex)",
+		returns = "bool",
+	},
+	guiGridListSetColumnTitle = {
+		type = "function",
+		args = "(element guiGridlist, int columnIndex, string title)",
+		returns = "bool",
+	},
+	guiGridListSetColumnWidth = {
+		type = "function",
+		args = "(element gridList, int columnIndex, number width, bool relative)",
+		returns = "bool",
+	},
+	guiGridListSetHorizontalScrollPosition = {
+		type = "function",
+		args = "(element guiGridlist, float fPosition)",
+		returns = "bool",
+	},
+	guiGridListSetItemColor = {
+		type = "function",
+		args = "(element gridList, int rowIndex, int columnIndex, int red, int green, int blue [, int alpha = 255])",
+		returns = "bool",
+	},
+	guiGridListSetItemData = {
+		type = "function",
+		args = "(element gridList, int rowIndex, int columnIndex, var data)",
+		returns = "bool",
+	},
+	guiGridListSetItemText = {
+		type = "function",
+		args = "(element gridList, int rowIndex, int columnIndex, string text, bool section, bool number)",
+		returns = "bool",
+	},
+	guiGridListSetScrollBars = {
+		type = "function",
+		args = "(element guiGridlist, bool horizontalBar, bool verticalBar)",
+		returns = "bool",
+	},
+	guiGridListSetSelectedItem = {
+		type = "function",
+		args = "(element gridList, int rowIndex, int columnIndex [, bool bReset = true])",
+		returns = "bool",
+	},
+	guiGridListSetSelectionMode = {
+		type = "function",
+		args = "(guiElement gridlist, int mode)",
+		returns = "bool",
+	},
+	guiGridListSetSortingEnabled = {
+		type = "function",
+		args = "(element guiGridlist, bool enabled)",
+		returns = "bool",
+	},
+	guiGridListSetVerticalScrollPosition = {
+		type = "function",
+		args = "(element guiGridlist, float fPosition)",
+		returns = "bool",
+	},
+	guiCreateMemo = {
+		type = "function",
+		args = "(float x, float y, float width, float height, string text, bool relative [, element parent = nil])",
+		returns = "gui-memo",
+	},
+	guiMemoGetCaretIndex = {
+		type = "function",
+		args = "(element theElement)",
+		returns = "int",
+	},
+	guiMemoGetVerticalScrollPosition = {
+		type = "function",
+		args = "(gui-memo theMemo)",
+		returns = "float",
+	},
+	guiMemoSetVerticalScrollPosition = {
+		type = "function",
+		args = "(gui-memo theMemo, float position)",
+		returns = "bool",
+	},
+	guiMemoIsReadOnly = {
+		type = "function",
+		args = "(gui-memo theMemo)",
+		returns = "bool",
+	},
+	guiMemoSetCaretIndex = {
+		type = "function",
+		args = "(gui-memo theMemo, int index)",
+		returns = "bool",
+	},
+	guiMemoSetReadOnly = {
+		type = "function",
+		args = "(gui-memo theMemo, bool status)",
+		returns = "bool",
+	},
+	guiCreateProgressBar = {
+		type = "function",
+		args = "(float x, float y, float width, float height, bool relative, [element parent = nil])",
+		returns = "element",
+	},
+	guiProgressBarGetProgress = {
+		type = "function",
+		args = "(progressBar theProgressbar)",
+		returns = "float",
+	},
+	guiProgressBarSetProgress = {
+		type = "function",
+		args = "(progressBar theProgressbar, float progress)",
+		returns = "bool",
+	},
+	guiCreateRadioButton = {
+		type = "function",
+		args = "(float x, float y, float width, float height, string text, bool relative, [element parent = nil])",
+		returns = "element",
+	},
+	guiRadioButtonGetSelected = {
+		type = "function",
+		args = "(element guiRadioButton)",
+		returns = "bool",
+	},
+	guiRadioButtonSetSelected = {
+		type = "function",
+		args = "(element guiRadioButton, bool state)",
+		returns = "bool",
+	},
+	guiCreateScrollBar = {
+		type = "function",
+		args = "(float x, float y, float width, float height, bool horizontal, bool relative, [element parent = nil])",
+		returns = "gui-scrollbar",
+	},
+	guiScrollBarGetScrollPosition = {
+		type = "function",
+		args = "(gui-scrollBar theScrollBar)",
+		returns = "float",
+	},
+	guiScrollBarSetScrollPosition = {
+		type = "function",
+		args = "(gui-scrollBar theScrollBar, float amount)",
+		returns = "bool",
+	},
+	guiCreateScrollPane = {
+		type = "function",
+		args = "(float x, float y, float width, float height, bool relative, [gui-element parent = nil])",
+		returns = "element",
+	},
+	guiScrollPaneGetHorizontalScrollPosition = {
+		type = "function",
+		args = "(element horizontalScrollPane)",
+		returns = "float",
+	},
+	guiScrollPaneGetVerticalScrollPosition = {
+		type = "function",
+		args = "(element verticalScrollPane)",
+		returns = "float",
+	},
+	guiScrollPaneSetHorizontalScrollPosition = {
+		type = "function",
+		args = "(element horizontalScrollPane, float position)",
+		returns = "bool",
+	},
+	guiScrollPaneSetScrollBars = {
+		type = "function",
+		args = "(element scrollPane, bool horizontal, bool vertical)",
+		returns = "bool",
+	},
+	guiScrollPaneSetVerticalScrollPosition = {
+		type = "function",
+		args = "(element verticalScrollPane, float position)",
+		returns = "bool",
+	},
+	guiCreateStaticImage = {
+		type = "function",
+		args = "(float x, float y, float width, float height, string path, bool relative, [element parent = nil])",
+		returns = "element",
+	},
+	guiStaticImageGetNativeSize = {
+		type = "function",
+		args = "(element theImage)",
+		returns = "2 ints",
+	},
+	guiStaticImageLoadImage = {
+		type = "function",
+		args = "(element theElement, string filename)",
+		returns = "bool",
+	},
+	guiCreateTabPanel = {
+		type = "function",
+		args = "(float x, float y, float width, float height, bool relative [, element parent = nil])",
+		returns = "element",
+	},
+	guiGetSelectedTab = {
+		type = "function",
+		args = "(element tabPanel)",
+		returns = "element",
+	},
+	guiSetSelectedTab = {
+		type = "function",
+		args = "(element tabPanel, element theTab)",
+		returns = "bool",
+	},
+	guiCreateTab = {
+		type = "function",
+		args = "(string text, element parent)",
+		returns = "element",
+	},
+	guiDeleteTab = {
+		type = "function",
+		args = "(element tabToDelete, element tabPanel)",
+		returns = "bool",
+	},
+	guiCreateLabel = {
+		type = "function",
+		args = "(float x, float y, float width, float height, string text, bool relative, [element parent = nil])",
+		returns = "element",
+	},
+	guiLabelGetColor = {
+		type = "function",
+		args = "(gui-element theLabel)",
+		returns = "3 ints",
+	},
+	guiLabelGetFontHeight = {
+		type = "function",
+		args = "(element theLabel)",
+		returns = "float",
+	},
+	guiLabelGetTextExtent = {
+		type = "function",
+		args = "(element theLabel)",
+		returns = "float",
+	},
+	guiLabelSetColor = {
+		type = "function",
+		args = "(element theElement, int red, int green, int blue)",
+		returns = "bool",
+	},
+	guiLabelSetHorizontalAlign = {
+		type = "function",
+		args = "(element theLabel, string align [, bool wordwrap = false])",
+		returns = "bool",
+	},
+	guiLabelSetVerticalAlign = {
+		type = "function",
+		args = "(element theLabel, string align)",
+		returns = "bool",
+	},
+	guiCreateWindow = {
+		type = "function",
+		args = "(float x, float y, float width, float height, string titleBarText, bool relative)",
+		returns = "element",
+	},
+	guiWindowIsMovable = {
+		type = "function",
+		args = "(gui-window guiWindow)",
+		returns = "bool",
+	},
+	guiWindowIsSizable = {
+		type = "function",
+		args = "(gui-window guiWindow)",
+		returns = "bool",
+	},
+	guiWindowSetMovable = {
+		type = "function",
+		args = "(element theElement, bool status)",
+		returns = "bool",
+	},
+	guiWindowSetSizable = {
+		type = "function",
+		args = "(element theElement, bool status)",
+		returns = "bool",
+	},
+	getAnalogControlState = {
+		type = "function",
+		args = "(string control)",
+		returns = "float",
+	},
+	getBoundKeys = {
+		type = "function",
+		args = "(string command/control)",
+		returns = "table",
+	},
+	getCommandsBoundToKey = {
+		type = "function",
+		args = "(string theKey, string keyState)",
+		returns = "table",
+	},
+	getKeyBoundToCommand = {
+		type = "function",
+		args = "(string command)",
+		returns = "string",
+	},
+	getKeyState = {
+		type = "function",
+		args = "(string keyName)",
+		returns = "bool",
+	},
+	createLight = {
+		type = "function",
+		args = "(int lightType, float posX, float posY, float posZ [, float radius = 3, int r = 255, int g = 0, int b = 0, float dirX = 0, float dirY = 0, float dirZ = 0, bool createsShadow = false ])",
+		returns = "light",
+	},
+	getLightColor = {
+		type = "function",
+		args = "(light theLight)",
+		returns = "3 ints",
+	},
+	getLightDirection = {
+		type = "function",
+		args = "(light theLight)",
+		returns = "3 floats",
+	},
+	getLightRadius = {
+		type = "function",
+		args = "(light theLight)",
+		returns = "float",
+	},
+	getLightType = {
+		type = "function",
+		args = "(light theLight)",
+		returns = "int",
+	},
+	setLightColor = {
+		type = "function",
+		args = "(light theLight, float r, float g, float b)",
+		returns = "bool",
+	},
+	setLightDirection = {
+		type = "function",
+		args = "(light theLight, float x, float y, float z)",
+		returns = "bool",
+	},
+	setLightRadius = {
+		type = "function",
+		args = "(light theLight, float radius)",
+		returns = "bool",
+	},
+	breakObject = {
+		type = "function",
+		args = "(object theObject)",
+		returns = "bool",
+	},
+	getObjectMass = {
+		type = "function",
+		args = "(object theObject)",
+		returns = "float",
+	},
+	isObjectBreakable = {
+		type = "function",
+		args = "(object theObject)",
+		returns = "bool",
+	},
+	respawnObject = {
+		type = "function",
+		args = "(object theObject)",
+		returns = "bool",
+	},
+	setObjectBreakable = {
+		type = "function",
+		args = "(object theObject, bool breakable)",
+		returns = "bool",
+	},
+	setObjectMass = {
+		type = "function",
+		args = "(object theObject, float mass)",
+		returns = "bool",
+	},
+	toggleObjectRespawn = {
+		type = "function",
+		args = "(object theObject, bool respawn)",
+		returns = "bool",
+	},
+	isChatVisible = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	canPedBeKnockedOffBike = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "bool",
+	},
+	getPedAnalogControlState = {
+		type = "function",
+		args = "(ped thePed, string controlName)",
+		returns = "float",
+	},
+	getPedAnimation = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "2 strings",
+	},
+	getPedBonePosition = {
+		type = "function",
+		args = "(ped thePed, int bone)",
+		returns = "3 floats",
+	},
+	getPedCameraRotation = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "float",
+	},
+	getPedControlState = {
+		type = "function",
+		args = "(ped thePed, string control)",
+		returns = "bool",
+	},
+	getPedMoveState = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "string",
+	},
+	getPedOxygenLevel = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "float",
+	},
+	getPedSimplestTask = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "string",
+	},
+	getPedTargetCollision = {
+		type = "function",
+		args = "(ped targetingPed)",
+		returns = "3 floats",
+	},
+	getPedTargetEnd = {
+		type = "function",
+		args = "(ped targetingPed)",
+		returns = "3 floats",
+	},
+	getPedTargetStart = {
+		type = "function",
+		args = "(ped targetingPed)",
+		returns = "3 floats",
+	},
+	getPedTask = {
+		type = "function",
+		args = "(ped thePed, string priority, int taskType)",
+		returns = "4 strings",
+	},
+	getPedVoice = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "2 strings",
+	},
+	getPedWeaponMuzzlePosition = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "3 floats",
+	},
+	givePedWeapon = {
+		type = "function",
+		args = "(ped thePed, int weapon [, int ammo = 30, bool setAsCurrent = false ])",
+		returns = "bool",
+	},
+	isPedDoingTask = {
+		type = "function",
+		args = "(ped thePed, string taskName)",
+		returns = "bool",
+	},
+	isPedReloadingWeapon = {
+		type = "function",
+		args = "(ped thePed)",
+		returns = "bool",
+	},
+	isPedTargetingMarkerEnabled = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	setAnalogControlState = {
+		type = "function",
+		args = "(string control [, float state])",
+		returns = "bool",
+	},
+	setPedAimTarget = {
+		type = "function",
+		args = "(ped thePed, float x, float y, float z)",
+		returns = "bool",
+	},
+	setPedAnalogControlState = {
+		type = "function",
+		args = "(ped thePed, string control, float state)",
+		returns = "bool",
+	},
+	setPedCameraRotation = {
+		type = "function",
+		args = "(ped thePed, float cameraRotation)",
+		returns = "bool",
+	},
+	setPedCanBeKnockedOffBike = {
+		type = "function",
+		args = "(ped thePed, bool canBeKnockedOffBike)",
+		returns = "bool",
+	},
+	setPedControlState = {
+		type = "function",
+		args = "(ped thePed, string control, bool state)",
+		returns = "bool",
+	},
+	setPedFootBloodEnabled = {
+		type = "function",
+		args = "(element thePlayer, bool enabled)",
+		returns = "bool",
+	},
+	setPedLookAt = {
+		type = "function",
+		args = "(ped thePed, float x, float y, float z [, int time = 3000 [, int blend = 1000], element target = nil])",
+		returns = "bool",
+	},
+	setPedOxygenLevel = {
+		type = "function",
+		args = "(ped thePed, float oxygen)",
+		returns = "bool",
+	},
+	setPedTargetingMarkerEnabled = {
+		type = "function",
+		args = "(bool enabled)",
+		returns = "bool",
+	},
+	setPedVoice = {
+		type = "function",
+		args = "(ped thePed, string voiceType, string voiceName)",
+		returns = "bool",
+	},
+	getLocalPlayer = {
+		type = "function",
+		args = "()",
+		returns = "player",
+	},
+	getPlayerMapBoundingBox = {
+		type = "function",
+		args = "()",
+		returns = "4 ints",
+	},
+	isPlayerHudComponentVisible = {
+		type = "function",
+		args = "(string component)",
+		returns = "bool",
+	},
+	isPlayerMapVisible = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	createProjectile = {
+		type = "function",
+		args = "(element creator, int weaponType [, float posX, float posY, float posZ, float force = 1.0, element target = nil, float rotX, float rotY, float rotZ, float velX, float velY, float velZ, int model])",
+		returns = "projectile",
+	},
+	getProjectileCounter = {
+		type = "function",
+		args = "(projectile projectile)",
+		returns = "int",
+	},
+	getProjectileCreator = {
+		type = "function",
+		args = "(projectile theProjectile)",
+		returns = "element",
+	},
+	getProjectileForce = {
+		type = "function",
+		args = "(projectile theProjectile)",
+		returns = "float",
+	},
+	getProjectileTarget = {
+		type = "function",
+		args = "(projectile theProjectile)",
+		returns = "element",
+	},
+	getProjectileType = {
+		type = "function",
+		args = "(projectile theProjectile)",
+		returns = "int",
+	},
+	setProjectileCounter = {
+		type = "function",
+		args = "(projectile projectile, int timeToDetonate)",
+		returns = "bool",
+	},
+	getResourceGUIElement = {
+		type = "function",
+		args = "([resource theResource = getThisResource()])",
+		returns = "element",
+	},
+	createTrayNotification = {
+		type = "function",
+		args = "(string notificationText, [ string iconType = 'default', bool useSound = true ])",
+		returns = "bool",
+	},
+	downloadFile = {
+		type = "function",
+		args = "(string fileName)",
+		returns = "bool",
+	},
+	getLocalization = {
+		type = "function",
+		args = "()",
+		returns = "table",
+	},
+	isTrayNotificationEnabled = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	setClipboard = {
+		type = "function",
+		args = "(string theText)",
+		returns = "bool",
+	},
+	setWindowFlashing = {
+		type = "function",
+		args = "(bool shouldFlash [, int count = 10])",
+		returns = "bool",
+	},
+	createSearchLight = {
+		type = "function",
+		args = "(float startX, float startY, float startZ, float endX, float endY, float endZ, float startRadius, float endRadius [, bool renderSpot = true])",
+		returns = "searchlight",
+	},
+	getSearchLightEndPosition = {
+		type = "function",
+		args = "(searchlight theSearchLight)",
+		returns = "3 floats",
+	},
+	getSearchLightEndRadius = {
+		type = "function",
+		args = "(searchlight theSearchLight)",
+		returns = "searchlight",
+	},
+	getSearchLightStartPosition = {
+		type = "function",
+		args = "(searchlight theSearchLight)",
+		returns = "searchlight",
+	},
+	getSearchLightStartRadius = {
+		type = "function",
+		args = "(searchlight theSearchLight)",
+		returns = "searchlight"
+	},
+	setSearchLightEndPosition = {
+		type = "function",
+		args = "(searchlight theSearchLight, float endX, float endY, float endZ)",
+		returns = "searchlight"
+	},
+	setSearchLightEndRadius = {
+		type = "function",
+		args = "(searchlight theSearchLight, float endRadius)",
+		returns = "searchlight"
+	},
+	setSearchLightStartPosition = {
+		type = "function",
+		args = "(searchlight theSearchLight, float startX, float startY, float startZ)",
+		returns = "searchlight"
+	},
+	setSearchLightStartRadius = {
+		type = "function",
+		args = "(searchlight theSearchLight, float startRadius)",
+		returns = "searchlight"
+	},
+	getHeliBladeCollisionsEnabled = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "bool",
+	},
+	getHelicopterRotorSpeed = {
+		type = "function",
+		args = "(vehicle heli)",
+		returns = "float",
+	},
+	getVehicleAdjustableProperty = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "int",
+	},
+	getVehicleComponentPosition = {
+		type = "function",
+		args = "(vehicle theVehicle, string theComponent [, string base = 'root'])",
+		returns = "3 floats",
+	},
+	getVehicleComponentRotation = {
+		type = "function",
+		args = "(vehicle theVehicle, string theComponent [, string base = 'parent'])",
+		returns = "3 floats",
+	},
+	getVehicleComponentVisible = {
+		type = "function",
+		args = "(vehicle theVehicle, string theComponent)",
+		returns = "bool",
+	},
+	getVehicleComponents = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "table",
+	},
+	getVehicleCurrentGear = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "int",
+	},
+	getVehicleGravity = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "3 floats",
+	},
+	getVehicleModelExhaustFumesPosition = {
+		type = "function",
+		args = "(int modelID)",
+		returns = "3 floats",
+	},
+	getVehicleNitroCount = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "int",
+	},
+	getVehicleNitroLevel = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "float",
+	},
+	getVehicleTurnVelocity = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "3 floats",
+	},
+	isVehicleNitroActivated = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "bool",
+	},
+	isVehicleNitroRecharging = {
+		type = "function",
+		args = "(vehicle theVehicle)",
+		returns = "bool",
+	},
+	isVehicleWheelOnGround = {
+		type = "function",
+		args = "(vehicle theVehicle, string|int wheel)",
+		returns = "bool",
+	},
+	isVehicleWindowOpen = {
+		type = "function",
+		args = "(vehicle theVehicle, int window)",
+		returns = "bool",
+	},
+	resetVehicleComponentPosition = {
+		type = "function",
+		args = "(vehicle theVehicle, string theComponent)",
+		returns = "bool",
+	},
+	resetVehicleComponentRotation = {
+		type = "function",
+		args = "(vehicle theVehicle, string theComponent)",
+		returns = "bool",
+	},
+	setHeliBladeCollisionsEnabled = {
+		type = "function",
+		args = "(vehicle theVehicle, bool collisions)",
+		returns = "bool",
+	},
+	setHelicopterRotorSpeed = {
+		type = "function",
+		args = "(vehicle heli, float speed)",
+		returns = "bool",
+	},
+	setVehicleAdjustableProperty = {
+		type = "function",
+		args = "(element theVehicle, int value)",
+		returns = "bool",
+	},
+	setVehicleComponentPosition = {
+		type = "function",
+		args = "(vehicle theVehicle, string theComponent, float posX, float posY, float posZ [, string base = 'root'])",
+		returns = "bool",
+	},
+	setVehicleComponentRotation = {
+		type = "function",
+		args = "(vehicle theVehicle, string theComponent, float rotX, float rotY, float rotZ [, string base = 'parent'])",
+		returns = "bool",
+	},
+	setVehicleDirtLevel = {
+		type = "function",
+		args = "(vehicle theVehicle, int dirtLevel)",
+		returns = "bool",
+	},
+	setVehicleGravity = {
+		type = "function",
+		args = "(vehicle theVehicle, float x, float y, float z)",
+		returns = "bool",
+	},
+	setVehicleModelExhaustFumesPosition = {
+		type = "function",
+		args = "(int modelID, float posX, float posY, float posZ)",
+		returns = "bool",
+	},
+	setVehicleNitroActivated = {
+		type = "function",
+		args = "(vehicle theVehicle, bool state)",
+		returns = "bool",
+	},
+	setVehicleNitroCount = {
+		type = "function",
+		args = "(vehicle theVehicle, int count)",
+		returns = "bool",
+	},
+	setVehicleNitroLevel = {
+		type = "function",
+		args = "(vehicle theVehicle, float level)",
+		returns = "bool",
+	},
+	setVehicleTurnVelocity = {
+		type = "function",
+		args = "(vehicle theVehicle, float rx, float ry, float rz)",
+		returns = "bool",
+	},
+	setVehicleWindowOpen = {
+		type = "function",
+		args = "(vehicle theVehicle, int window, bool open)",
+		returns = "bool",
+	},
+	getWaterLevel = {
+		type = "function",
+		args = "(float posX, float posY, float posZ [, bool bCheckWaves = false])",
+		returns = "float",
+	},
+	getWaterLevel = {
+		type = "function",
+		args = "(water theWater)",
+		returns = "float",
+	},
+	isWaterDrawnLast = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	setWaterDrawnLast = {
+		type = "function",
+		args = "(bool bEnabled)",
+		returns = "bool",
+	},
+	createWeapon = {
+		type = "function",
+		args = "(string theType, float x, float y, float z)",
+		returns = "weapon",
+	},
+	fireWeapon = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "bool",
+	},
+	getWeaponAmmo = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "int",
+	},
+	getWeaponClipAmmo = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "int",
+	},
+	getWeaponFiringRate = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "int",
+	},
+	getWeaponFlags = {
+		type = "function",
+		args = "(weapon theWeapon, string theFlag)",
+		returns = "bool",
+	},
+	getWeaponOwner = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "bool",
+	},
+	getWeaponState = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "string",
+	},
+	getWeaponTarget = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "nil/element/float",
+	},
+	resetWeaponFiringRate = {
+		type = "function",
+		args = "(weapon theWeapon)",
+		returns = "bool",
+	},
+	setWeaponClipAmmo = {
+		type = "function",
+		args = "(weapon theWeapon, int clipAmmo)",
+		returns = "bool",
+	},
+	setWeaponFiringRate = {
+		type = "function",
+		args = "(weapon theWeapon, int firingRate)",
+		returns = "bool",
+	},
+	setWeaponFlags = {
+		type = "function",
+		args = "(weapon theWeapon, string theFlag, bool enable)",
+		returns = "bool",
+	},
+	setWeaponState = {
+		type = "function",
+		args = "(weapon theWeapon, string theState)",
+		returns = "bool",
+	},
+	setWeaponTarget = {
+		type = "function",
+		args = "(weapon theWeapon, element theTarget [, int theComponent = 255])",
+		returns = "bool",
+	},
+	createSWATRope = {
+		type = "function",
+		args = "(float fx, float fy, float fZ, int duration)",
+		returns = "bool",
+	},
+	getAircraftMaxHeight = {
+		type = "function",
+		args = "()",
+		returns = "float",
+	},
+	getBirdsEnabled = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	getGarageBoundingBox = {
+		type = "function",
+		args = "(int garageID)",
+		returns = "4 floats",
+	},
+	getGaragePosition = {
+		type = "function",
+		args = "(int garageID)",
+		returns = "3 floats",
+	},
+	getGarageSize = {
+		type = "function",
+		args = "(int garageID)",
+		returns = "3 floats",
+	},
+	getGroundPosition = {
+		type = "function",
+		args = "(float x, float y, float z)",
+		returns = "float",
+	},
+	getInteriorFurnitureEnabled = {
+		type = "function",
+		args = "(int roomID)",
+		returns = "bool",
+	},
+	getInteriorSoundsEnabled = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	getNearClipDistance = {
+		type = "function",
+		args = "()",
+		returns = "float",
+	},
+	getPedsLODDistance = {
+		type = "function",
+		args = "()",
+		returns = "float",
+	},
+	setPedsLODDistance = {
+		type = "function",
+		args = "(float distance)",
+		returns = "bool",
+	},
+	resetPedsLODDistance = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	getScreenFromWorldPosition = {
+		type = "function",
+		args = "(float x, float y, float z [, float edgeTolerance = 0.0, bool relative = true])",
+		returns = "3 floats",
+	},
+	getVehiclesLODDistance = {
+		type = "function",
+		args = "()",
+		returns = "2 floats",
+	},
+	getWorldFromScreenPosition = {
+		type = "function",
+		args = "(float x, float y, float depth)",
+		returns = "3 floats",
+	},
+	isAmbientSoundEnabled = {
+		type = "function",
+		args = "(string theType)",
+		returns = "bool",
+	},
+	isLineOfSightClear = {
+		type = "function",
+		args = "(float startX, float startY, float startZ, float endX, float endY, float endZ, [ bool checkBuildings = true, bool checkVehicles = true, bool checkPeds = true, bool checkObjects = true, bool checkDummies = true, bool seeThroughStuff = false, bool ignoreSomeObjectsForCamera = false, element ignoredElement = nil])",
+		returns = "bool",
+	},
+	isWorldSoundEnabled = {
+		type = "function",
+		args = "(int group, [ int index = -1])",
+		returns = "bool",
+	},
+	isWorldSpecialPropertyEnabled = {
+		type = "function",
+		args = "(string propname)",
+		returns = "bool",
+	},
+	processLineOfSight = {
+		type = "function",
+		args = "()",
+		returns = "",
+	},
+	resetAmbientSounds = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	resetVehiclesLODDistance = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	resetWorldSounds = {
+		type = "function",
+		args = "()",
+		returns = "bool",
+	},
+	setAircraftMaxHeight = {
+		type = "function",
+		args = "(float height)",
+		returns = "bool",
+	},
+	setAmbientSoundEnabled = {
+		type = "function",
+		args = "(string theType, bool enable)",
+		returns = "bool",
+	},
+	setBirdsEnabled = {
+		type = "function",
+		args = "(bool enable)",
+		returns = "bool",
+	},
+	setJetpackMaxHeight = {
+		type = "function",
+		args = "(float height)",
+		returns = "bool",
+	},
+	setNearClipDistance = {
+		type = "function",
+		args = "(float distance)",
+		returns = "bool",
+	},
+	setVehiclesLODDistance = {
+		type = "function",
+		args = "(float vehiclesDistance, float trainsAndPlanesDistance = vehiclesDistance * 2.14)",
+		returns = "bool",
+	},
+	setWorldSoundEnabled = {
+		type = "function",
+		args = "(int group, [ int index = -1, ] bool enable [, bool immediate = false])",
+		returns = "bool",
+	},
+	setWorldSpecialPropertyEnabled = {
+		type = "function",
+		args = "(string propname, bool enable)",
+		returns = "bool",
+	},
+	testLineAgainstWater = {
+		type = "function",
+		args = "(float startX, float startY, float startZ, float endX, float endY, float endZ)",
+		returns = "1 bool 3 floats",
+	},
 }
